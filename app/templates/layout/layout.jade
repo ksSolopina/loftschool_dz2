@@ -1,0 +1,20 @@
+include ../common/_mixins.jade
+doctype html
+html(lang='ru-RU')
+    include ../common/head.jade
+    body
+        .wrapper
+            .main-content
+                include ../common/header.jade
+                .container
+                    include ../common/navigation.jade
+                    .second-nav
+                        block breadcrumbs
+                        .second-nav__right
+                            include ../common/viewer_switcher.jade
+                            include ../common/pagination.jade
+                    include ../common/sidebar.jade
+                    block content
+        include ../common/footer.jade
+        script(src="js/jquery.js")
+        script(src="js/main.js")
